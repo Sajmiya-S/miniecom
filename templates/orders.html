@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/orders.css' %}">
+{% endblock %}
+
+{% block code %}
+    <div class="orders">
+        <h1 class="text-center p-2">My Orders</h1>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">All Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pending</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Confirmed</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shipped</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Delivered</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cancelled</a>
+            </li>
+        </ul>
+
+        <!-- NO ORDERS MESSAGE -->
+        {% if not order %}
+        <div class="text-center mt-4">
+            <h5>No orders yet!</h5>
+            <p class="text-muted">Looks like you haven’t placed any orders yet.</p>
+            <a href="{% url 'shop' %}" class="btn btn-success mt-2">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Start Shopping
+            </a>
+            <img src="/static/images/bg3.png" class="img-fluid mx-auto d-block mb-3 w-50" alt="Empty Cart">
+        </div>
+        {% endif %}
+
+
+{% endblock %}

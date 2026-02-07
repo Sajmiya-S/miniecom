@@ -1,0 +1,152 @@
+/* =========================
+   BACKGROUND & HEADING
+========================= */
+.addr {
+    background-image: url(/static/images/bg1.png);
+    background-position: center 75%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 700px;
+}
+
+.addr h1,
+.addr > p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* =========================
+   SAVED ADDRESS SECTION
+========================= */
+.saved {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px;
+    padding: 50px;
+}
+
+.saved a {
+    text-decoration: none;
+}
+
+/* Card text */
+.saved p {
+    color: black !important;
+}
+
+/* =========================
+   CARD SIZE (ALL SAME)
+========================= */
+.saved .card {
+    width: 18rem !important;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+}
+
+/* Card body */
+.saved .card .card-body {
+    flex: 1;
+}
+
+/* =========================
+   BUTTONS SIDE BY SIDE
+========================= */
+.saved .card .card-body a.btn {
+    float: left;
+    width: 48%;
+    margin: 6px 1%;
+    white-space: nowrap;
+}
+
+/* Clear float */
+.saved .card .card-body::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* =========================
+   ADD NEW ADDRESS CARD
+========================= */
+.add-new-card {
+    border: 2px dashed #4c8b2c;
+    background: #f6fbef;
+}
+
+.add-new-card .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Plus icon */
+.add-icon {
+    color: green;
+}
+/* Glassy modal background */
+.glass-modal .modal-content {
+
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Header & footer transparent */
+.glass-modal .modal-header,
+.glass-modal .modal-footer {
+    border: none;
+}
+
+/* Title styling */
+.glass-modal .modal-title {
+    font-weight: 600;
+}
+
+
+/* Buttons */
+.glass-modal .btn-danger {
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+.glass-modal .btn-outline-secondary {
+    border-radius: 30px;background: green;
+    color: white;
+    border-color: rgba(255,255,255,0.5);
+}
+
+.glass-modal .btn-outline-secondary:hover {
+    background: rgb(32, 152, 32);
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    /* Remove background image */
+    .addr {
+        background-image: none;
+        background-color: #f5f9ee;
+        min-height: auto;
+    }
+
+    .addr h1,
+    .addr > p {
+        color: #2f5e1c;
+    }
+
+    /* Stack buttons */
+    .saved .card .card-body a.btn {
+        float: none;
+        width: 100%;
+        margin: 6px 0;
+    }
+}
